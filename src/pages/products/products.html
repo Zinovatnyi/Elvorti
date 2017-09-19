@@ -1,0 +1,75 @@
+<ion-header>
+  <ion-navbar no-border-bottom>
+    <ion-title text-center>
+      Products
+    </ion-title>
+  </ion-navbar>
+
+  <ion-toolbar no-border-top>
+    <ion-segment [(ngModel)]="machines">
+      <ion-segment-button value="Planters">
+        Planters
+      </ion-segment-button>
+      <ion-segment-button value="Seed drills">
+        Seed drills
+      </ion-segment-button>
+      <ion-segment-button value="Disc harrows">
+        Disc harrows
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding class="bg">
+  <div [ngSwitch]="machines">
+    <ion-list *ngSwitchCase="'Planters'">
+      <ion-item>
+        <ion-thumbnail item-left>
+          <button block (click)="onVegaPage()">
+            <img src="assets/img/vega.png">
+          </button>
+        </ion-thumbnail>
+        <h2>VEGA (mini-till)</h2>
+      </ion-item>
+      <ion-item>
+        <ion-thumbnail item-left>
+          <button block (click)="onVestaPage()">
+            <img src="assets/img/vesta.png">
+          </button>
+        </ion-thumbnail>
+        <h2>VESTA (traditional tillage)</h2>
+      </ion-item>
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'Seed drills'">
+      <ion-item>
+        <ion-thumbnail item-left>
+          <button block (click)="onAstraPage()">
+            <img src="assets/img/astra.png">
+          </button>
+        </ion-thumbnail>
+        <h2>ASTRA-4, ASTRA-6</h2>
+      </ion-item>
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'Disc harrows'">
+      <ion-item>
+        <ion-thumbnail item-left>
+          <button block (click)="onPalladaPage()">
+            <img src="assets/img/pallada.png">
+          </button>
+        </ion-thumbnail>
+        <h2>PALLADA (2-rows)</h2>
+      </ion-item>
+      <ion-item>
+        <ion-thumbnail item-left>
+          <button block (click)="onAntaresPage()">
+            <img src="assets/img/antares.png">
+          </button>
+        </ion-thumbnail>
+        <h2>ANTARES (4-rows)</h2>
+      </ion-item>
+      
+    </ion-list>
+  </div>
+</ion-content>

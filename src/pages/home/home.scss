@@ -1,0 +1,16 @@
+page-home {
+  .bg{
+    background-image: url('../assets/img/introBg_1.jpg');
+    background-repeat: no-repeat;
+    background-size:cover;
+  
+  ion-avatar {
+        display: flex;
+        justify-content: center;
+        align-content: center; 
+        opacity: 0.4;
+    }
+  
+  
+  }
+}
